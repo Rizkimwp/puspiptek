@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', 'Produk')
+@section('title', 'Show Kategori')
 @section('content')
 
 <!-- Start Content -->
@@ -12,7 +12,7 @@
                 <ul class="list-unstyled ">
         @foreach ($kategori as $detail)
                     <li class="pb-3">
-                    <a href="{{route ('showkategori', $detail -> id)}}" class="fw-bold"> {{$detail -> nama}}</a>
+                    <a href="{{route ('showkategori' , $detail -> id)}}" class="text-decoration-none text-dark"> {{$detail -> nama}}</a>
                     </li>
                    @endforeach
                 </ul>
@@ -24,7 +24,7 @@
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="{{$product -> gambar}}">
+                                <img class="card-img rounded-0 img-fluid" src="/{{$product -> gambar}}">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white mt-2" href="{{route('add', $product->id)}}" role="button"><i class="fas fa-cart-plus"></i></a></li>
